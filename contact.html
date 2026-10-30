@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - ShambaPulse</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&amp;family=Source+Serif+4:wght@600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/jpeg" href="img/bcd.jpg">
+</head>
+<body class="contact">
+
+<header>
+    <h1>ShambaPulse</h1>
+    <p>Where farmers meet quality services.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="alerts.html">Alerts</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="ussd.html">USSD</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section class="contact-intro">
+        <h2>Contact Us</h2>
+        <p>
+            We'd love to hear from you! Whether you are a farmer with
+            a question, a buyer looking for produce, or a partner who
+            wants to work with us, get in touch using the details
+            below.
+        </p>
+    </section>
+
+    <section class="contact-grid">
+
+        <div class="contact-card">
+            <h3>Reach Us</h3>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:info@shambapulse.com">info@shambapulse.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+25480557427">+254 805 574 27</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/25480557427">+254 805 574 27</a></li>
+                <li><strong>Address:</strong> ShambaPulse Ltd, Nairobi, Kenya</li>
+            </ul>
+        </div>
+
+        <div class="contact-card">
+            <h3>Office Hours</h3>
+            <ul>
+                <li><strong>Monday to Friday:</strong> 8:00 AM to 5:00 PM</li>
+                <li><strong>Saturday:</strong> 9:00 AM to 1:00 PM</li>
+                <li><strong>Sunday:</strong> Closed</li>
+            </ul>
+            <p class="note">All times are East Africa Time (EAT).</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>USSD Help</h3>
+            <p>
+                No internet? You can reach ShambaPulse services from
+                any phone by dialling our USSD code. See the
+                <a href="ussd.html">USSD page</a> for the steps.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="contact-form-section">
+        <h2>Send Us a Message</h2>
+        <p id="form-status" class="notice" role="status" hidden></p>
+        <form id="contact-form" action="api/contact.php" method="post">
+            <input type="hidden" name="csrf" value="">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required maxlength="100">
+
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">I am a</label>
+            <select id="subject" name="role">
+                <option>Farmer</option>
+                <option>Buyer</option>
+                <option>Partner or organisation</option>
+                <option>Other</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required maxlength="2000"></textarea>
+
+            <button type="submit" class="hero-button">Send Message</button>
+        </form>
+    </section>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+            <summary>Is ShambaPulse free to use?</summary>
+            <p>Basic alerts and price information are free. Details of any paid features will be shared as they launch.</p>
+        </details>
+
+        <details>
+            <summary>Do I need a smartphone?</summary>
+            <p>No. You can use our USSD service from any mobile phone, with no internet needed.</p>
+        </details>
+
+        <details>
+            <summary>Which languages do you support?</summary>
+            <p>English and Kiswahili.</p>
+        </details>
+
+        <details>
+            <summary>How fast will you reply?</summary>
+            <p>We aim to respond to every message within two working days.</p>
+        </details>
+    </section>
+
+</main>
+
+<footer>
+    <p>ShambaPulse, Nairobi</p>
+    <p>Site built by Kinanga Japhet and Gideon Francis, DBIT Year 1, 2026.</p>
+</footer>
+
+<script src="js/contact.js" defer></script>
+</body>
+</html>

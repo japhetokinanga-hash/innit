@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prices - ShambaPulse</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&amp;family=Source+Serif+4:wght@600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/jpeg" href="img/bcd.jpg">
+</head>
+<body class="inner">
+
+<header>
+    <h1>
+        <img src="img/logo.jpg" alt="" class="logo">
+        ShambaPulse
+    </h1>
+    <p>Weather alerts, market prices and farm advisories for smallholder farmers and pastoralists in Nyanza, Kenya.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="alerts.html">Alerts</a></li>
+        <li><a href="prices.html" aria-current="page">Prices</a></li>
+        <li><a href="ussd.html">USSD and SMS</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section class="page-intro">
+        <h2>Market prices</h2>
+        <p>
+            Price information is kept distinct from demand signals.
+            Every price on this page shows the commodity, the unit, the
+            market and the date, so a farmer can tell what the number
+            actually means.
+        </p>
+    </section>
+
+    <section class="split">
+        <div class="content">
+            <h2>Latest prices</h2>
+            <p>
+                Prices come from the ShambaPulse database. Each record keeps its
+                unit, market, date and source, so a number is never shown without
+                its meaning.
+            </p>
+
+            <div class="filters">
+                <label for="price-q">Search commodity</label>
+                <input type="search" id="price-q" placeholder="e.g. maize">
+                <label for="price-market">Market</label>
+                <select id="price-market"><option value="">All markets</option></select>
+            </div>
+            <p id="price-status" class="lead" aria-live="polite"></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Commodity</th>
+                        <th>Unit</th>
+                        <th>Market</th>
+                        <th>Date</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="price-body"></tbody>
+            </table>
+
+            <p>
+                Prices are shown with their unit, source and date in the
+                full system. A price without a unit is not useful, so the
+                unit is never left out.
+            </p>
+        </div>
+
+        <aside class="side">
+            <h3>Why the unit matters</h3>
+            <p>
+                A price for "maize" means nothing until you know whether
+                it is per kilogram, per 90 kg bag, or per debe.
+                ShambaPulse records the unit with every price, and
+                duplicate feed imports are blocked by a stable key so the
+                same price is not counted twice.
+            </p>
+        </aside>
+    </section>
+
+    <section class="reading">
+        <h2>How to read a price</h2>
+        <ul class="card-row">
+            <li>
+                <h3>Commodity</h3>
+                <p>What is being sold, such as maize, beans or milk.</p>
+            </li>
+            <li>
+                <h3>Unit</h3>
+                <p>How it is measured: a 90 kg bag, a litre, a debe.</p>
+            </li>
+            <li>
+                <h3>Market</h3>
+                <p>Where the price was recorded. Prices differ from market to market.</p>
+            </li>
+            <li>
+                <h3>Date</h3>
+                <p>When it was recorded. An old price may no longer hold.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="compare">
+        <h2>Compare before you sell</h2>
+        <ul class="card-row">
+            <li>
+                <h3>By market</h3>
+                <p>Farmers compare prices across nearby markets before deciding where to sell.</p>
+            </li>
+            <li>
+                <h3>By commodity</h3>
+                <p>Each commodity has its own unit, so prices are compared like with like.</p>
+            </li>
+            <li>
+                <h3>By date</h3>
+                <p>The date beside every price shows how fresh the information is.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="steps">
+        <h2>Tips before you sell</h2>
+        <ol>
+            <li>
+                <h3>Check the unit</h3>
+                <p>Make sure you are comparing the same bag, litre or debe.</p>
+            </li>
+            <li>
+                <h3>Check two markets</h3>
+                <p>A short trip can sometimes mean a better price, but count transport costs.</p>
+            </li>
+            <li>
+                <h3>Check the date</h3>
+                <p>Use the freshest price you can find before agreeing to sell.</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="cta">
+        <h2>Check prices from any phone</h2>
+        <p>Choose "Market prices" in the USSD menu, no internet needed.</p>
+        <a href="ussd.html" class="hero-button">See the USSD menu</a>
+    </section>
+
+</main>
+
+<footer>
+    <p>ShambaPulse - Diploma of Business Information Technology, Strathmore University</p>
+    <p>By Gideon Francis (227167) and Japhet Kinanga (227610)</p>
+</footer>
+
+<script src="js/prices.js" defer></script>
+</body>
+</html>
